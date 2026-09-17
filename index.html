@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>جزوه مدون روماتولوژی - جلسه نهم: استئوآرتریت (OA)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap');
+
+    :root {
+      --primary:      #1a237e;
+      --secondary:    #283593;
+      --accent1:      #0277bd;
+      --accent2:      #00838f;
+      --accent3:      #6a1b9a;
+      --accent4:      #ad1457;
+      --accent5:      #e65100;
+      --bg:           #f0f4ff;
+      --card:         #ffffff;
+      --text:         #1a1a2e;
+      --muted:        #546e7a;
+      --border:       #c5cae9;
+      --green:        #1b5e20;
+      --greenlight:   #e8f5e9;
+      --redlight:     #ffebee;
+      --red:          #b71c1c;
+      --yellowlight:  #fff8e1;
+      --yellow:       #f57f17;
+      --bluelight:    #e3f2fd;
+      --blue:         #0d47a1;
+      --purplelight:  #f3e5f5;
+      --purple:       #4a148c;
+      --teallight:    #e0f7fa;
+      --teal:         #006064;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 15px;
+      padding-bottom: 90px;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 40%, #0277bd 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 30px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 50px;
+      padding: 6px 22px;
+      font-size: 13.5px;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .cover h1 {
+      font-size: 2.3em;
+      font-weight: 800;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .cover h2 {
+      font-size: 1.25em;
+      font-weight: 400;
+      opacity: 0.92;
+      margin-bottom: 28px;
+    }
+    .cover .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cover .meta-item {
+      background: rgba(255,255,255,0.14);
+      border-radius: 12px;
+      padding: 10px 22px;
+      font-size: 13px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .cover .meta-item span { display: block; font-weight: 700; font-size: 15px; margin-top: 3px; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: white;
+      margin: 30px auto;
+      max-width: 960px;
+      border-radius: 16px;
+      padding: 28px 35px;
+      box-shadow: 0 4px 20px rgba(26,35,126,0.08);
+      border-right: 6px solid var(--primary);
+    }
+    .toc h3 {
+      font-size: 1.25em;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .toc ol {
+      padding-right: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 30px;
+    }
+    @media (max-width: 768px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+    .toc ol li {
+      padding: 4px 0;
+      color: var(--accent1);
+      font-weight: 600;
+      font-size: 13.5px;
+    }
+    .toc ol li a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--primary); text-decoration: underline; }
+
+    /* ===== MAIN WRAPPER ===== */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      border-radius: 14px;
+      padding: 16px 24px;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+    .section-header .icon {
+      font-size: 1.4em;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sh-blue   { background: linear-gradient(135deg, #1565c0, #0288d1); }
+    .sh-purple { background: linear-gradient(135deg, #6a1b9a, #ab47bc); }
+    .sh-teal   { background: linear-gradient(135deg, #00695c, #26a69a); }
+    .sh-red    { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+    .sh-orange { background: linear-gradient(135deg, #e65100, #ff7043); }
+    .sh-green  { background: linear-gradient(135deg, #1b5e20, #43a047); }
+    .sh-indigo { background: linear-gradient(135deg, #283593, #5c6bc0); }
+    .sh-pink   { background: linear-gradient(135deg, #880e4f, #e91e63); }
+    .sh-cyan   { background: linear-gradient(135deg, #006064, #00acc1); }
+
+    /* ===== SUBSECTION ===== */
+    .subsection {
+      background: white;
+      border-radius: 14px;
+      padding: 24px 26px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 4px solid transparent;
+    }
+    .sub-blue   { border-top-color: #1565c0; }
+    .sub-purple { border-top-color: #6a1b9a; }
+    .sub-teal   { border-top-color: #00695c; }
+    .sub-red    { border-top-color: #b71c1c; }
+    .sub-orange { border-top-color: #e65100; }
+    .sub-green  { border-top-color: #1b5e20; }
+    .sub-indigo { border-top-color: #283593; }
+    .sub-cyan   { border-top-color: #006064; }
+
+    .subsection h4 {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--border);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ===== INFO BOX ===== */
+    .infobox {
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .infobox .ib-icon { font-size: 1.3em; flex-shrink: 0; margin-top: 1px; }
+    .ib-blue   { background: var(--bluelight);   border-right: 4px solid #1565c0; color: #0d1b5e; }
+    .ib-green  { background: var(--greenlight);  border-right: 4px solid #2e7d32; color: #1b3a1f; }
+    .ib-red    { background: var(--redlight);    border-right: 4px solid #c62828; color: #5c0000; }
+    .ib-yellow { background: var(--yellowlight); border-right: 4px solid #f9a825; color: #4a2c00; }
+    .ib-purple { background: var(--purplelight); border-right: 4px solid #6a1b9a; color: #2d0048; }
+    .ib-teal   { background: var(--teallight);   border-right: 4px solid #006064; color: #003033; }
+
+    /* ===== REFINED LIST STYLES (SAFARI & MOBILE SAFE) ===== */
+    .list-styled {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .list-styled li {
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      border-bottom: 1px dotted #e8eaf6;
+    }
+    .list-styled li:last-child { border-bottom: none; }
+    .list-styled li::before {
+      content: '◈';
+      color: var(--accent1);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 13px;
+    }
+    .list-styled.green li::before  { color: #2e7d32; }
+    .list-styled.red li::before    { color: #c62828; }
+    .list-styled.purple li::before { color: #6a1b9a; }
+    .list-styled.teal li::before   { color: #006064; }
+    .list-styled.orange li::before { color: #e65100; }
+
+    .li-content {
+      flex: 1;
+      display: inline;
+      line-height: 1.85;
+      color: var(--text);
+    }
+
+    /* ===== TAGS / PILLS ===== */
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 3px;
+      vertical-align: middle;
+    }
+    .tag-blue   { background: #e3f2fd; color: #0d47a1; }
+    .tag-red    { background: #ffebee; color: #b71c1c; }
+    .tag-green  { background: #e8f5e9; color: #1b5e20; }
+    .tag-purple { background: #f3e5f5; color: #4a148c; }
+    .tag-orange { background: #fff3e0; color: #e65100; }
+    .tag-teal   { background: #e0f7fa; color: #006064; }
+    .tag-yellow { background: #fff8e1; color: #f57f17; }
+    .tag-pink   { background: #fce4ec; color: #880e4f; }
+
+    /* ===== TABLE ===== */
+    .table-wrap { overflow-x: auto; margin: 18px 0; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: right;
+    }
+    table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    table thead th {
+      padding: 12px 14px;
+      font-weight: 700;
+    }
+    table tbody tr:nth-child(even) { background: #f8faff; }
+    table tbody tr:hover { background: #eef2ff; }
+    table tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e0e4f8;
+      vertical-align: top;
+      line-height: 1.7;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== HIGHLIGHT BADGE ===== */
+    .hbadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #fff176, #ffee58);
+      color: #4a2c00;
+      border: 1px solid #f9a825;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 0;
+    }
+
+    /* ===== GRID 2-COL ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    @media(max-width:680px){ .grid2 { grid-template-columns: 1fr; } }
+
+    /* ===== MINI CARD ===== */
+    .mini-card {
+      border-radius: 10px;
+      padding: 15px 18px;
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+    .mc-blue   { background: #e8eaf6; border-right: 4px solid #3949ab; }
+    .mc-green  { background: #e8f5e9; border-right: 4px solid #388e3c; }
+    .mc-red    { background: #ffebee; border-right: 4px solid #e53935; }
+    .mc-purple { background: #f3e5f5; border-right: 4px solid #8e24aa; }
+    .mc-orange { background: #fff3e0; border-right: 4px solid #f4511e; }
+    .mc-teal   { background: #e0f7fa; border-right: 4px solid #00838f; }
+    .mini-card h5 { font-weight: 700; margin-bottom: 8px; font-size: 14.5px; color: var(--secondary); }
+
+    /* ===== KEY-VALUE ROW (SAFARI / MOBILE SAFE INLINE FLOW) ===== */
+    .kv-row {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px dotted #e0e4f8;
+      line-height: 1.8;
+      display: block;
+    }
+    .kv-row:last-child { border-bottom: none; }
+    .kv-key {
+      font-weight: 700;
+      color: var(--secondary);
+      display: inline;
+      margin-left: 6px;
+    }
+    .kv-value {
+      color: var(--text);
+      display: inline;
+    }
+
+    strong.em  { color: #b71c1c; font-weight: 700; }
+    strong.em2 { color: #1565c0; font-weight: 700; }
+    strong.em3 { color: #2e7d32; font-weight: 700; }
+    strong.em4 { color: #6a1b9a; font-weight: 700; }
+
+    .added-note {
+      background: #fff8f8;
+      border-right: 3px solid #d32f2f;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin: 8px 0;
+      font-size: 13.5px;
+      color: #b71c1c;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13.5px;
+      margin-top: 50px;
+      border-top: 3px solid var(--accent1);
+    }
+    .footer p { margin: 4px 0; }
+
+    /* ===== سیستم تعاملی یادداشت‌های درون‌متنی مینیاتوری ===== */
+    .note-marker {
+      background-color: #ffd54f !important;
+      border: 1px solid #ffb300 !important;
+      color: #000 !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      padding: 1px 4px !important;
+      margin: 0 3px !important;
+      font-size: 11px !important;
+      user-select: none !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      font-weight: bold !important;
+      position: relative;
+      animation: notePulse 2s infinite;
+    }
+    @keyframes notePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    /* کدهای CSS خالص جهت سازگاری و نمایش یادداشت در نمایشگر فایل آفلاین iOS */
+    .note-tooltip {
+      display: none;
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+      background: #37474f;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      min-width: 180px;
+      max-width: 260px;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      white-space: normal;
+      line-height: 1.5;
+      font-weight: normal;
+      text-align: right;
+    }
+    .note-marker:hover .note-tooltip, .note-marker:active .note-tooltip {
+      display: block !important;
+    }
+
+    /* ===== ساختار پنجره مودال مدیریت یادداشت‌ها ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26, 35, 126, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      direction: rtl;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-top: 5px solid var(--primary);
+    }
+    .modal-card h4 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-danger { background: var(--red); color: white; }
+    .btn-secondary { background: #eceff1; color: #37474f; }
+
+    /* ===== نوار ابزار تعاملی انتهای صفحه ===== */
+    #highlight-panel {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+      border-radius: 50px;
+      padding: 10px 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--primary);
+      direction: rtl;
+      width: max-content;
+      max-width: 95%;
+    }
+    #highlight-panel span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hl-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .hl-btn:hover { transform: scale(1.15); }
+    .hl-btn-yellow { background-color: #fff59d; }
+    .hl-btn-green  { background-color: #c8e6c9; }
+    .hl-btn-blue   { background-color: #bbdefb; }
+    .hl-btn-pink   { background-color: #f8bbd0; }
+    .panel-action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .panel-action-btn-red { background: var(--red); }
+  </style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="badge">دانشکده پزشکی دانشگاه آزاد اسلامی یزد • ورودی ۱۴۰۱</div>
+  <h1>کورس روماتولوژی — جلسه نهم</h1>
+  <h2>مبحث جامع استئوآرتریت (Osteoarthritis / آرتروز)</h2>
+  <div class="meta">
+    <div class="meta-item">مدرس ارجمند: <span>دکتر سلطانی</span></div>
+    <div class="meta-item">نویسنده: <span>احمدرضا عبداللهی پور</span></div>
+    <div class="meta-item">برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a></div>
+  </div>
+</div>
+
+<!-- ===== TOC ===== -->
+<div class="toc">
+  <h3>📋 فهرست جامع سرفصل‌ها و مباحث آموزشی</h3>
+  <ol>
+    <li><a href="#sec-intro">۱. تعاریف بنیادین، اپیدمیولوژی و افتراق مفهومی با آرتریت روماتوئید (RA vs OA)</a></li>
+    <li><a href="#sec-physiology">۲. فیزیولوژی مفصل ساینویال و پنج لایه محافظتی ساختار مفصلی</a></li>
+    <li><a href="#sec-pathophysiology">۳. پاتوفیزیولوژی سلولی-مولکولی، نقش کندروسیت‌ها و واسطه‌های التهابی</a></li>
+    <li><a href="#sec-riskfactors">۴. ریسک فاکتورهای اتیولوژیک، اختلالات مکانیکی، ژنتیک و مواجهه‌های شغلی</a></li>
+    <li><a href="#sec-pathology">۵. پاتولوژی ماکروسکوپیک، تشکیل استئوفیت و مکانیسم عصب‌زایی جدید</a></li>
+    <li><a href="#sec-clinical">۶. تظاهرات بالینی، دردهای مکانیکی در برابر التهابی و سه‌گانه علائم زانو</a></li>
+    <li><a href="#sec-grading">۷. سیستم درجه‌بندی رادیوگرافیک کلگرن-لارنس و گسست علائم با تصویر</a></li>
+    <li><a href="#sec-exam">۸. معاینه فیزیکی سیستمیک (مفاصل دست، ناهنجاری‌ها و تست‌های اختصاصی زانو و لگن)</a></li>
+    <li><a href="#sec-synovial">۹. آنالیز جامع مایع ساینویال (اندیکاسیون‌های آرتروسنتز و تمایز سلولی)</a></li>
+    <li><a href="#sec-imaging">۱۰. ویژگی‌های رادیوگرافیک، علائم اختصاصی و گرافی کمپارتمان‌ها</a></li>
+    <li><a href="#sec-treatment">۱۱. الگوریتم مدیریت درمانی (غیردارویی، دارویی، انواع تزریقات و جراحی تعویض مفصل)</a></li>
+  </ol>
+</div>
+
+<div class="main">
+
+  <!-- ===================== SECTION 1 ===================== -->
+  <div class="section-header sh-blue" id="sec-intro">
+    <div class="icon">🩺</div>
+    <div>۱. تعاریف بنیادین، اپیدمیولوژی و تفاوت OA با آرتریت روماتوئید</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>ریشه‌شناسی و ماهیت استئوآرتریت (Osteoarthritis)</h4>
+    <p>
+      واژه <strong>Osteoarthritis</strong> از اجزای «استئو» (Osteo به معنای استخوان)، «آرتر» (Arthro به معنای مفصل) و پسوند «ایت» (Itis بیانگر فرآیند آسیب/التهاب) تشکیل شده است. بنابراین استئوآرتریت یعنی بیماری‌ای که در آن <strong>هم استخوان زیرین و هم اجزای مفصل</strong> درگیر می‌شوند. در استئوآرتریت علاوه بر غضروف هیالن مفصلی، پرده ساینویال، کپسول، لیگامان‌ها و استخوان ساب‌کندرال نیز دچار دگرگونی پاتولوژیک می‌شوند.
+    </p>
+
+    <div class="infobox ib-blue">
+      <span class="ib-icon">📌</span>
+      <div>
+        <strong>ویژگی‌های اپیدمیولوژیک کلیدی:</strong><br/>
+        استئوآرتریت یک بیماری مزمن مفصلی با <strong>سیری آهسته و پیشرونده</strong> است. این بیماری <strong>شایع‌ترین نوع آرتریت</strong> در انسان بوده و یکی از اصلی‌ترین علل ناتوانی حرکتی (Disability) در سنین بالا به شمار می‌رود.
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>شایع‌ترین مفاصل درگیر در OA</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>ستون فقرات گردنی (Cervical spine)</strong></span></li>
+          <li><span class="li-content"><strong>مفصل هیپ / ران (Hip joint)</strong></span></li>
+          <li><span class="li-content"><strong>مفصل زانو (Knee joint)</strong></span></li>
+          <li><span class="li-content"><strong>ستون فقرات لومبوساکرال (Lumbosacral spine)</strong></span></li>
+          <li><span class="li-content"><strong>مفاصل انگشتان دست:</strong> بند انتهایی (DIP)، بند میانی (PIP) و مفصل قاعده شست (1st CMC)</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>مفاصل با درگیری نادر و غیراختصاصی در OA</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>مچ دست (Wrist joint)</strong> — در صورت درگیری شک به RA یا علل ثانویه مطرح می‌شود.</span></li>
+          <li><span class="li-content"><strong>مچ پا (Ankle joint)</strong> — اغلب به دنبال تروماهای قبلی است.</span></li>
+          <li><span class="li-content"><strong>مفصل آرنج (Elbow joint)</strong></span></li>
+          <li><span class="li-content"><strong>مفصل شانه (Glenohumeral joint)</strong></span></li>
+          <li><span class="li-content"><strong class="em">نکته خاص بالینی:</strong> حتی مفصل گیجگاهی-فکی (<strong>TMJ</strong>) نیز می‌تواند دچار استئوآرتریت شود.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>شاخص مقایسه</th>
+            <th>استئوآرتریت (Osteoarthritis - OA)</th>
+            <th>آرتریت روماتوئید (Rheumatoid Arthritis - RA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>منشأ و کانون اولیه پاتولوژی</strong></td>
+            <td><strong>تمامیت مفصل</strong> با محوریت شکست بیومکانیکی غضروف و استخوان ساب‌کندرال</td>
+            <td><strong>پرده ساینویوم (Synovitis اولیه)</strong> و تهاجم پانوس به غضروف</td>
+          </tr>
+          <tr>
+            <td><strong>الگوی تقارن درگیری</strong></td>
+            <td>معمولاً <strong>غیرقرینه (Asymmetric)</strong>؛ بارگذاری مکانیکی موضعی نقش اصلی را دارد.</td>
+            <td>عمدتاً <strong>متقارن (Symmetric)</strong> و پلی‌آرتیکولار سیستمیک</td>
+          </tr>
+          <tr>
+            <td><strong>مفاصل انگشتان دست</strong></td>
+            <td>درگیری تیپیک <strong>DIP و PIP و CMC1</strong> (مفاصل MCP به‌ندرت درگیر می‌شوند)</td>
+            <td>درگیری تیپیک <strong>MCP و PIP و مچ دست</strong> (DIP درگیر نمی‌شود)</td>
+          </tr>
+          <tr>
+            <td><strong>مایع ساینویال</strong></td>
+            <td>غیرالتهابی / مکانیکال (تعداد گلبول سفید کمتر از ۲۰۰۰ سلول)</td>
+            <td>التهابی با برتری نوتروفیل‌ها (گلبول سفید بالای ۲۰۰۰ تا ۵۰۰۰۰)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 2 ===================== -->
+  <div class="section-header sh-teal" id="sec-physiology">
+    <div class="icon">🦴</div>
+    <div>۲. فیزیولوژی مفصل طبیعی و ساختارهای محافظت‌کننده (Joint Protectors)</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>سیستم ادغام‌یافته بیومکانیکی مفصل</h4>
+    <p>
+      مفصل محل اتصال دو استخوان است. دلیل اینکه سطوح استخوانی در حالت طبیعی مستقیماً روی یکدیگر ساییده نمی‌شوند و فاصله بین آن‌ها حفظ می‌شود، وجود شبکه هماهنگی از <strong>عناصر محافظت‌کننده مفصل</strong> است. نقص در هر یک از این ساختارها، شروع زنجیره تخریب استئوآرتریت خواهد بود:
+    </p>
+
+    <ul class="list-styled teal">
+      <li>
+        <span class="li-content">
+          <strong>۱. لیگامان‌ها (Ligaments):</strong> ایجاد ثبات استاتیک در جهات حرکتی مختلف و هدایت دامنه‌های مجاز حرکتی.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>۲. کپسول مفصلی (Joint Capsule):</strong> دربرگیرنده فضای مفصل و حفظ مایع و فشار هیدرواستاتیک درونی.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>۳. عضلات اطراف مفصلی (Periarticular Muscles):</strong> ایجاد ثبات دینامیک؛ <strong class="em">ضعف عضلانی، به‌ویژه ضعف عضله چهارسر ران (Quadriceps)</strong>، یکی از مهم‌ترین ریسک فاکتورهای اولیه و دلایل پیشرفت OA زانو است.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>۴. مایع مفصلی (Synovial Fluid):</strong> دارای دو کارکرد فیزیولوژیک بسیار مهم:
+          <br/>• <em>عملکرد اسفنج‌گونه (Shock Absorber):</em> پخش کردن بارهای پرفشار ناگهانی در کل سطح مفصل.
+          <br/>• <em>لوبریکیشن سطحی (Superficial Lubrication):</em> غضروف‌ها چنان صیقلی تراشیده شده‌اند که ضریب اصطکاک نزدیک به صفر دارند؛ مایع مفصلی با پروتئین‌های لوبریکین و هیالورونان مانع سایش سطحی می‌شود.
+          <br/><span class="hbadge">نکته حیاتی</span> اختلال در عملکرد اسفنجی و لوبریکاسیون مایع سینوویال از <strong>اولین نقص‌هایی</strong> است که در ابتدای OA پدید می‌آید.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>۵. استخوان ساب‌کندرال (Subchondral Bone):</strong> استخوان ترابکولار متخلخل واقع در زیر غضروف که نسبتاً سفت اما دارای <strong>خاصیت ارتجاعی بیومکانیک (Elastic shock absorber)</strong> است تا شوک‌های فشاری را جذب کند.
+        </span>
+      </li>
+    </ul>
+
+    <div class="added-note">
+      <strong>توضیح ویژه استاد سلطانی پیرامون نقش محوری استخوان ساب‌کندرال:</strong><br/>
+      یکی از اولین جاهایی که در استئوآرتریت دچار آسیب می‌شود، استخوان ساب‌کندرال است. اگر به هر علتی این استخوان ترابکولار الاستیسیته خود را از دست داده و سفت و متراکم (Eburnated/Sclerotic) شود، دیگر نمی‌تواند شوک‌های فشاری را در خود مستهلک کند. در نتیجه امواج فشار مستقیم به سمت غضروف بازتاب یافته و موجب شکستن و له‌شدگی غضروف سر استخوان می‌شوند. این فرآیند به‌خوبی اثبات می‌کند که چرا نام این بیماری را «استئو-آرتریت» گذاشته‌اند و نشان می‌دهد استخوان، بازیگر خط مقدم این تخریب است.
+    </div>
+
+    <div class="infobox ib-teal">
+      <span class="ib-icon">⚡</span>
+      <div>
+        <strong>مسیر انتقال لود فشاری مفصل:</strong><br/>
+        بار مکانیکی وارده از بالا به مفصل ابتدا به <span class="tag tag-blue">مایع مفصلی</span> منتقل می‌شود، سپس به <span class="tag tag-green">غضروف مفصلی</span> رسیده و سرانجام در <span class="tag tag-purple">استخوان ساب‌کندرال</span> جذب و مستهلک می‌گردد.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 3 ===================== -->
+  <div class="section-header sh-purple" id="sec-pathophysiology">
+    <div class="icon">🔬</div>
+    <div>۳. پاتوفیزیولوژی سلولی-مولکولی و عملکرد دوگانه کندروسیت‌ها</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>بیوشیمی بافت غضروف هیالن</h4>
+    <p>
+      غضروف بافتی <strong>کاملاً فاقد رگ خونی (Avascular)</strong>، فاقد عروق لنفاوی و فاقد عصب در شرایط فیزیولوژیک است. منبع تغذیه غضروف صرفاً انتشار مواد از عروق بستر ساینویوم به درون مایع سینوویال و سپس نفوذ به لایه‌های غضروف است.
+    </p>
+
+    <div class="mini-card mc-purple">
+      <h5>اجزای اصلی ماتریکس خارج سلولی غضروف</h5>
+      <div class="kv-row">
+        <span class="kv-key">۱. سلول‌های کندروسیت (Chondrocytes):</span>
+        <span class="kv-value">تنها سلول زنده موجود در غضروف و <strong class="em">مهم‌ترین سلول در پاتوژنز استئوآرتریت</strong>.</span>
+      </div>
+      <div class="kv-row">
+        <span class="kv-key">۲. پروتئوگلیکان‌ها (Proteoglycans):</span>
+        <span class="kv-value">زنجیره‌های گلیکوزآمینوگلیکان با بار منفی که آب را درون ماتریکس به دام انداخته و حالت فنری ایجاد می‌کنند.</span>
+      </div>
+      <div class="kv-row">
+        <span class="kv-key">۳. اگرکان (Aggrecan):</span>
+        <span class="kv-value">بزرگ‌ترین پروتئوگلیکان سازنده ساختار ساختمانی ماتریکس غضروفی.</span>
+      </div>
+      <div class="kv-row">
+        <span class="kv-key">۴. فاکتورهای رشد (Growth Factors):</span>
+        <span class="kv-value">مسئول تحریک آنابولیسم ماتریکس؛ مبنای طراحی داروهای نوین DMOAD در آینده خواهند بود.</span>
+      </div>
+      <div class="kv-row">
+        <span class="kv-key">۵. سایتوکاین‌ها و آنزیم‌ها:</span>
+        <span class="kv-value">تنظیم‌کننده‌های هومئوستاز، تعادل و کاتابولیسم بافتی در لایه‌های مختلف غضروف.</span>
+      </div>
+    </div>
+
+    <h4 style="margin-top:20px;">نقش کندروسیت‌ها در چرخه معیوب OA</h4>
+    <p>
+      کندروسیت‌ها در شرایط طبیعی پروتئوگلیکان‌ها و کلاژن نوع II ترشح می‌کنند تا بافت رشد و نمو یابد. اما هنگامی که <strong>بار مکانیکی بیش از حد (Mechanical Overload)</strong> اعمال شود یا اختلالات متابولیک رخ دهد، کندروسیت‌ها تغییر فنوتیپ داده و از دو جهت عمل می‌کنند:
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>۱. مهار آنابولیسم (عدم ساخت ماتریکس)</h5>
+        <p>کندروسیت‌ها ترشح فاکتورهای رشد ضروری و ساخت پروتئوگلیکان‌ها و اگرکان را متوقف می‌کنند و سنتز ماتریکس سالم به شدت کاهش می‌یابد.</p>
+      </div>
+
+      <div class="mini-card mc-orange">
+        <h5>۲. تحریک کاتابولیسم (ترشح آنزیم‌های تجزیه‌کننده)</h5>
+        <p>کندروسیت‌ها به ترشح متالوپروتئینازها (MMPs) و اگرکاناز روی می‌آورند که مستقیماً کلاژن و ماتریکس پروتئینی را هضم و متلاشی می‌کنند.</p>
+      </div>
+    </div>
+
+    <div class="infobox ib-purple">
+      <span class="ib-icon">🧬</span>
+      <div>
+        <strong>آبشار سایتوکاینی و آپوپتوز کندروسیت‌ها:</strong><br/>
+        سایتوکاین‌های التهابی پیش‌ساز مانند <strong>IL-1β</strong> و <strong>TNF-α</strong> باعث القای مرگ برنامه‌ریزی‌شده (Apoptosis) در کندروسیت‌ها می‌شوند. از آنجا که غضروف بالغ ظرفیت ترمیمی ناچیزی دارد، بافت فیبروزه ناکارآمد جایگزین کندروسیت‌های از دست رفته می‌شود.<br/>
+        همچنین آسیب کندروسیت‌ها باعث ترشح شدید <strong>نیتریک اکسید (NO)</strong> و <strong>پروتئینازها</strong> می‌شود:
+        <ul class="list-styled purple" style="margin-top:6px;">
+          <li><span class="li-content">پروتئینازها پروتئین‌های محافظ بین کندروسیت‌ها را هضم می‌کنند.</span></li>
+          <li><span class="li-content">نیتریک اکسید عروق ساینویال را متسع کرده، نفوذپذیری را افزایش داده و سبب هجوم واسطه‌های تخریبی بیشتر و تشدید التهاب ثانویه مفصل می‌گردد.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 4 ===================== -->
+  <div class="section-header sh-orange" id="sec-riskfactors">
+    <div class="icon">⚠️</div>
+    <div>۴. ریسک فاکتورهای اتیولوژیک، اختلالات بیومکانیک و مواجهه‌های شغلی</div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>عوامل خطرساز سیستمیک و موضعی در بروز OA</h4>
+    <p>
+      استئوآرتریت یک بیماری چندعاملی است. گرچه لود مکانیکی محور اصلی است، عوامل التهابی، متابولیک و هورمونی نیز سهم چشمگیری دارند:
+    </p>
+
+    <div class="kv-row">
+      <span class="kv-key">۱. افزایش سن (Age):</span>
+      <span class="kv-value">مهم‌ترین و قوی‌ترین ریسک فاکتور بروز OA است؛ با این وجود سنین زیر ۵۰ سال نیز در زمینه علل ژنتیکی یا ثانویه درگیر می‌شوند.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۲. جنسیت مؤنث (Female Sex):</span>
+      <span class="kv-value">شیوع بیماری پس از یائسگی به دلیل افت استروژن و مسائل هورمونی در زنان افزایش چشمگیری می‌یابد.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۳. ژنتیک و وراثت:</span>
+      <span class="kv-value">سهم وراثت در مفاصل دست و هیپ حدود <strong>۵۰ درصد</strong>، در زانو حدود <strong>۳۰ درصد</strong> است. فرم ارثی منتشر (Generalized OA) به درگیری همزمان بیش از ۳ ناحیه مفصلی (مثلاً چند DIP به همراه زانو و MTP) اطلاق می‌شود.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۴. دفرمیتی‌ها و اختلال امتداد مفصل (Malalignment):</span>
+      <span class="kv-value">انحرافاتی همچون <strong>ژنوواروم (Genu Varum - پای پرانتزی)</strong> که لود فشاری را روی کمپارتمان مدیال می‌اندازد، یا <strong>ژنووالگوم (Genu Valgum - پای ضربدری)</strong> که لود را روی کمپارتمان لترال متمرکز می‌کند.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۵. ترومای قبلی و شکستگی (Fracture):</span>
+      <span class="kv-value">ناهمواری سطح مفصلی پس از جوش خوردن نامناسب شکستگی‌ها منجر به ساییدگی تسریع‌شده می‌شود.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۶. نکروز آواسکولار سر استخوان (AVN):</span>
+      <span class="kv-value">قطع خونرسانی به اپی‌فیز ناشی از مصرف کورتیکواستروئیدها (مثلاً در درمان RA)، مصرف الکل، یا بیماری غواصی (دیس‌باریسم/Decompression).</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۷. آسیب لیگامان و مینیسک:</span>
+      <span class="kv-value">پارگی رباط متقاطع قدامی (ACL) یا پارگی‌های مینیسک ثبات مفصل را زائل ساخته و بار نقطه‌ای را به شدت بالا می‌برند.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۸. تراکم استخوان (Bone Mineral Density):</span>
+      <span class="kv-value"><strong class="em">نکته امتحانی:</strong> هر چه تراکم استخوان بالاتر باشد، احتمال بروز استئوآرتریت بیشتر است (استخوان سفت ضربه‌گیری کمتری دارد)؛ اما این به معنای عدم ابتلای بیماران استئوپروتیک نیست و هر دو بیماری می‌توانند در یک فرد همزمان دیده شوند.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">۹. بدخیمی‌ها (Malignancy):</span>
+      <span class="kv-value">تومورهای موضعی یا متاستازها با برهم زدن آناتومی و یکپارچگی استخوان بستر.</span>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚖️</span>
+      <div>
+        <strong>مکانیسم دوگانه چاقی (Obesity) در استئوآرتریت:</strong><br/>
+        <strong>۱. بار اضافی مکانیکی (Mechanical Overload):</strong> وزن اضافه فشار تصاعدی شدیدی بر مفاصل تحمل‌کننده وزن تحمیل می‌کند.<br/>
+        <strong>۲. اثرات آدیپوکاین‌ها به‌ویژه لپتین (Leptin):</strong> بافت چربی هورمون لپتین ترشح می‌کند که واسطه‌ای پیش‌التهابی است و اثر مخرب مستقیم بر کندروسیت‌ها دارد. از این رو افراد چاق حتی در مفاصل بدون وزن نظیر <strong>انگشتان دست</strong> نیز دچار OA می‌شوند! بنابراین کاهش وزن در همه مبتلایان به OA موجب بهبود درد و عملکرد می‌گردد.
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>عنوان شغل / فعالیت پرتکرار</th>
+            <th>مفصل هدف با بالاترین احتمال درگیری OA</th>
+            <th>علت بیومکانیکی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>کشاورزان (Farmers)</strong></td>
+            <td><strong>مفصل هیپ (Hip)</strong></td>
+            <td>خم‌شدن و حمل بارهای سنگین مداوم</td>
+          </tr>
+          <tr>
+            <td><strong>معدن‌کاران (Miners)</strong></td>
+            <td><strong>زانو و ستون فقرات (Knee & Spine) + دست‌ها</strong></td>
+            <td>وضعیت چمباتمه طولانی، لرزش چکش‌های پنوماتیک و ضربه به دست</td>
+          </tr>
+          <tr>
+            <td><strong>کارگران کشتی‌سازی (Shipyard workers)</strong></td>
+            <td><strong>زانو و انگشتان دست (Knee & Fingers)</strong></td>
+            <td>بالا رفتن از داربست‌ها و کارهای سنگین دست ورزی</td>
+          </tr>
+          <tr>
+            <td><strong>برنج‌کاران (Rice farmers)</strong></td>
+            <td><strong>مفصل زانو (Knee)</strong></td>
+            <td>کار مداوم در زمین‌های گل‌آلود و فشار خمیدگی مداوم زانو</td>
+          </tr>
+          <tr>
+            <td><strong>دوندگان ماراتن عادی (Runners)</strong></td>
+            <td><strong>مفصل هیپ (Hip)</strong></td>
+            <td>توالی ضربات متناوب به مفصل ران</td>
+          </tr>
+          <tr>
+            <td><strong>دوندگان نخبه و حرفه‌ای (Elite runners)</strong></td>
+            <td><strong>همزمان مفصل هیپ و زانو (Hip & Knee)</strong></td>
+            <td>مایکرودمیج‌های شدید و تجمع فشارهای بالای کیلومتراژ فوق‌سنگین</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 5 ===================== -->
+  <div class="section-header sh-red" id="sec-pathology">
+    <div class="icon">🔬</div>
+    <div>۵. پاتولوژی ماکروسکوپیک، استئوفیت‌ها و پدیده نئووَسکولاریزاسیون</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>سیر تخریب بافتی غضروف و استخوان</h4>
+    <p>
+      در سیر بیماری استئوآرتریت، تغییرات ساختاری گام‌به‌گام رخ می‌دهد که در معاینات، تصویربرداری و علائم بیمار بازتاب می‌یابد:
+    </p>
+
+    <ul class="list-styled red">
+      <li>
+        <span class="li-content">
+          <strong>ایجاد شیارها و فیشورها (Fissuring & Fibrillation):</strong> در نمای ماکروسکوپیک سطح صیقلی غضروف کنده شده، ریش‌ریش (Shredded) و قطعه‌قطعه می‌شود.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>کیست‌های استخوانی ساب‌کندرال یا ژئود (Subchondral Geode Cysts):</strong> در اثر فشار بالای داخل مفصلی، مایع ساینویال از میان شیارهای عمقی غضروف به زیر استخوان ترابکولار نفوذ کرده و حفرات کیستیک با دیواره اسکلروتیک ایجاد می‌کند.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>اجسام آزاد داخل مفصلی (Loose Bodies / Joint Mice):</strong> قطعاتی از غضروف فرسوده و حتی استخوان شکسته کنده شده و آزادانه در حفره مفصل شناور می‌شوند؛ گیر افتادن این اجسام موجب قفل شدن ناگهانی زانو در حین راه رفتن می‌گردد.
+        </span>
+      </li>
+      <li>
+        <span class="li-content">
+          <strong>استئوفیت (Osteophyte formation):</strong> برآمدگی‌های استخوانی خاری‌شکل در لبه مفاصل که صرفاً ناشی از رسوب متراکم کلسیم هستند و ساختار کانالیکول و مجاری هاورس استخوان نرمال را ندارند؛ از این رو بسیار ترد و مستعد شکستگی‌اند. کنده شدن استئوفیت به فضای خلفی زانو می‌تواند در اکستنشن زانو قفل‌شدگی ایجاد نماید.
+          <br/><em>نکته:</em> بروز استئوفیت در مفاصل دست نشان می‌دهد فاکتورهای رشد ترشح‌شده از کندروسیت‌ها و سایتوکاین‌ها نیز در تشکیل آن دخیل هستند و فقط فشار مکانیکی مطرح نیست.
+        </span>
+      </li>
+    </ul>
+
+    <div class="added-note">
+      <strong>پدیده نئووَسکولاریزاسیون و رگ‌زایی/عصب‌زایی جدید (نکته تدریس استاد سلطانی):</strong><br/>
+      غضروف نرمال فاقد عروق و اعصاب است. اما در استئوآرتریت پیشرفته تعادل بافتی به حدی برهم می‌خورد که غضروف دچار رگ‌زایی نابجا (Neo-vascularization) و به دنبال آن جوانه‌زنی پایانه‌های عصبی حسی درد (Neo-innervation) می‌شود. در این مراحل پیشرفته، خود غضروف به یک کانون اولیه تولید درد شدید مبدل می‌گردد. یکی از روش‌های تسکینی نوین، فرسایش رادیوفرکوئنسی اعصاب ژنیکولار (Radiofrequency Ablation - RFA) یا تزریق استروئید در کنار این اعصاب جهت خاموش کردن فعالیت آنها و ایجاد بی‌حسی طولانی‌مدت است که اثری سریع‌تر از سوزاندن عروق دارد.
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 6 ===================== -->
+  <div class="section-header sh-indigo" id="sec-clinical">
+    <div class="icon">🩺</div>
+    <div>۶. تظاهرات بالینی، ویژگی‌های درد و سه‌گانه علائم زانو</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>الگوی دردهای مکانیکی در برابر دردهای التهابی</h4>
+    <p>
+      شکایت اصلی بیماران مبتلا به استئوآرتریت «درد» است. مشخصات درد سرنخ اصلی افتراق بالینی است:
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>درد مکانیکال (تیپیک استئوآرتریت)</h5>
+        <ul class="list-styled">
+          <li><span class="li-content">با <strong>فعالیت و بارگذاری مفصل تشدید</strong> می‌شود.</span></li>
+          <li><span class="li-content">با <strong>استراحت تسکین</strong> می‌یابد.</span></li>
+          <li><span class="li-content">بیشترین شدت آن در <strong>اوایل شب</strong> (پس از خستگی کارهای روزانه) بروز می‌کند.</span></li>
+          <li><span class="li-content"><strong>خشکی و سفتی حرکتی (Gelling pain):</strong> با شروع حرکت پس از استراحت ایجاد شده و گذراست (معمولاً زیر ۳۰ دقیقه).</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>درد التهابی (نظیر RA و اسپوندیلیت)</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content">با <strong>استراحت بدتر</strong> و با تحرک ملایم بهبود می‌یابد.</span></li>
+          <li><span class="li-content">درد در <strong>کل طول شب و دمدم‌های صبح</strong> بیمار را بیدار می‌کند.</span></li>
+          <li><span class="li-content">علت تشدید صبحگاهی: افت ترشح کورتیزول اندوژن در انتهای شب و اوج‌گیری سایتوکاین‌های التهابی مانند <strong>IL-6</strong>.</span></li>
+          <li><span class="li-content"><strong>خشکی صبحگاهی (Morning stiffness):</strong> طولانی‌مدت بوده و بیش از ۱ ساعت ادامه دارد.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 style="margin-top:20px;">سه‌گانه علائم مکانیکی زانو در استئوآرتریت</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>اصطلاح بالینی</th>
+            <th>مکانیسم پاتوفیزیولوژیک</th>
+            <th>تظاهر عملی بیمار</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>خالی کردن زانو<br/>(Buckling / Giving way)</strong></td>
+            <td>آسیب لیگامان‌ها، نارسایی مهاری حس عمق (Proprioception) و ناتوانی و ضعف شدید تاندون عضله چهارسر</td>
+            <td>بیمار حین راه رفتن ناگهان تعادل خود را از دست داده و زانو زیر پایش خالی می‌شود.</td>
+          </tr>
+          <tr>
+            <td><strong>قفل شدن در اکستنشن<br/>(Locking)</strong></td>
+            <td>کنده شدن استئوفیت لبه‌ای یا جابجایی جسم آزاد به بخش‌های خلفی/بین کوندیلی مفصل</td>
+            <td>پا در حالت باز شدن کامل (صاف کردن زانو) قفل می‌کند و صاف نمی‌شود.</td>
+          </tr>
+          <tr>
+            <td><strong>گیر افتادن در فلکشن<br/>(Catching)</strong></td>
+            <td>گیر افتادن زوائد استئوفیتی یا لبه مینیسک پاره در شیار پاتلوفمورال یا زاویه فلکشن</td>
+            <td>در هنگام خم کردن زانو، مانعی حس شده و حرکت ناگهان متوقف و گیر می‌کند.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mini-card mc-yellow" style="margin-top:14px; background:#fffde7; border-right:4px solid #fbc02d;">
+      <h5>محدودیت دامنه حرکتی و نقص عملکردی (Limited ROM & Function)</h5>
+      <p>
+        درد مزمن باعث بی‌استفاده ماندن اندام و به دنبال آن <strong>آتروفی عضلانی شدید (Disuse atrophy)</strong> می‌شود. در نتیجه بیمار دامنه حرکتی فعال و غیرفعال مفصل را از دست داده و توانایی بالا رفتن از پله یا برخاستن از زمین مختل می‌گردد.
+      </p>
+    </div>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">🚨</span>
+      <div>
+        <strong>نشانه‌های فرم التهابی استئوآرتریت (Clues of inflammation in OA):</strong><br/>
+        گاهی بیمار مبتلا به استئوآرتریت علائم التهابی غافلگیرکننده‌ای نشان می‌دهد که باید به دقت پایش شود:
+        <br/>۱) بروز <strong>درد شدید شبانه</strong>
+        <br/>۲) <strong>افیوژن‌های مکرر و مداوم مفصلی</strong> به دنبال سینوویت واکنشی
+        <br/>۳) <strong>الگوی پلی‌آرتیکولار (Polyarticular pattern)</strong>
+        <br/>۴) <strong>درگیری همزمان مفاصل مشترک با RA</strong> (مانند مچ دست و PIP)
+        <br/>۵) <strong>مثبت شدن فاز حاد التهابی</strong> (افزایش اندک ESR و CRP)
+        <br/>۶) <strong>سن پایین‌تر ابتلا (Younger age)</strong> و سیر پیشرفت سریع (Rapidly progressive)
+        <br/>۷) <strong>پاسخ درمانی شگفت‌انگیز به داروهای ضد روماتیسمی (DMARDs)</strong> — از جمله تجربه و مقاله استاد در زمینه پاسخ این بیماران به <em>متوتروکسات</em>.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 7 ===================== -->
+  <div class="section-header sh-green" id="sec-grading">
+    <div class="icon">📊</div>
+    <div>۷. سیستم درجه‌بندی رادیوگرافیک کلگرن-لارنس (Kellgren-Lawrence)</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>معیار پایش شدت استئوآرتریت در گرافی ساده</h4>
+    <p>
+      مقیاس <strong>Kellgren-Lawrence (KL)</strong> سیستم استاندارد بین‌المللی برای طبقه‌بندی شدت رادیوگرافیک استئوآرتریت بر اساس دو شاخص «میزان کاهش فضای مفصل» و «درجه استئوفیت‌سازی» است که در ۵ مرحله (Grade 0 تا 4) درجه‌بندی می‌شود:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>درجه (Grade)</th>
+            <th>وضعیت فضا و استخوان در گرافی</th>
+            <th>تفسیر رادیولوژیک</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Grade 0</strong></td>
+            <td>فضای مفصلی کاملاً طبیعی، بدون استئوفیت یا اسکلروز</td>
+            <td>مفصل نرمال و بدون شواهد استئوآرتریت</td>
+          </tr>
+          <tr>
+            <td><strong>Grade 1</strong></td>
+            <td>احتمال باریک شدن بسیار جزئی فضای مفصلی، استئوفیت‌های بسیار کوچک و مشکوک</td>
+            <td>مشکوک (Doubtful)</td>
+          </tr>
+          <tr>
+            <td><strong>Grade 2</strong></td>
+            <td>استئوفیت‌های لبه‌ای مشخص و قطعی، حفظ نسبی فضای مفصلی</td>
+            <td>خفیف (Minimal / Mild OA)</td>
+          </tr>
+          <tr>
+            <td><strong>Grade 3</strong></td>
+            <td>استئوفیت‌های متعدد متوسط، کاهش مشخص فضای مفصلی، اسکلروز ساب‌کندرال خفیف</td>
+            <td>متوسط (Moderate OA)</td>
+          </tr>
+          <tr>
+            <td><strong>Grade 4</strong></td>
+            <td>استئوفیت‌های بزرگ، کاهش شدید و از بین رفتن کامل فضای مفصلی (Bone-on-bone)، اسکلروز شدید و دفرمیتی سر استخوان</td>
+            <td>شدید و پیشرفته (Severe OA)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-green">
+      <span class="ib-icon">⭐</span>
+      <div>
+        <strong class="em">نکته بسیار مهم امتحانی (Clinico-Radiological Dissociation):</strong><br/>
+        <strong>هیچ‌گونه ارتباط خطی مستقیمی بین درجه رادیوگرافی کلگرن-لارنس و شدت درد بالینی بیمار وجود ندارد! (Poor correlation with pain severity)</strong><br/>
+        <em>مثال بالینی استاد:</em> ممکن است در گرافی زانوهای یک بیمار، زانوی راست در <strong>استیج ۴ کلگرن-لارنس</strong> (بدون فضای مفصلی) باشد اما درد اندکی داشته باشد، در حالی که زانوی چپ بیمار در <strong>استیج ۱</strong> بوده ولی بیمار از درد طاقت‌فرسا در همان زانوی چپ شکایت کند! درمان بر اساس بالین و علائم بیمار پایه‌ریزی می‌شود نه صرفاً عکس رادیولوژی.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 8 ===================== -->
+  <div class="section-header sh-purple" id="sec-exam">
+    <div class="icon">🖐️</div>
+    <div>۸. رویکرد جامع به معاینه بالینی فیزیکی (دست، زانو و لگن)</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>معاینه فیزیکی مفاصل دست (Hands)</h4>
+    <p>
+      در دست‌ها، تظاهر اصلی استئوفیت‌ها به شکل برجستگی‌های گره‌مانند استخوانی، سفت و غیرحساس در لمس است:
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>گره‌های هبردن (Heberden's Nodes)</h5>
+        <p>
+          تشکیل برجستگی‌های استخوانی در مفاصل <strong>بین‌بند انگشتی انتهایی (DIP)</strong>. این گره‌ها در استئوآرتریت به طور تیپیک <strong>دوطرفه (Bilateral)</strong> بوده و علامت مشخصه پاتوگنومونیک OA دست هستند.
+        </p>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>گره‌های بوچارد (Bouchard's Nodes)</h5>
+        <p>
+          تشکیل برجستگی‌های استخوانی در مفاصل <strong>بین‌بند انگشتی میانی (PIP)</strong>. در معاینه ممکن است یک‌طرفه یا دوطرفه باشند. مفاصل PIP برخلاف DIP، هم در استئوآرتریت (OA) و هم در آرتریت روماتوئید (RA) درگیر می‌شوند.
+        </p>
+      </div>
+    </div>
+
+    <div class="infobox ib-teal">
+      <span class="ib-icon">🔑</span>
+      <div>
+        <strong>درگیری قاعده شست (1st CMC Joint):</strong><br/>
+        مفصل کارپومتاکارپال اول (بین استخوان تراپزیوم و اولین متاکارپ) <strong>تقریباً همیشه در استئوآرتریت دست درگیر می‌شود</strong> و باعث برجستگی قاعده شست و حالت دست مربعی (Squaring of the hand) می‌گردد.
+      </div>
+    </div>
+
+    <h4 style="margin-top:24px;">دفرمیتی‌های ماکروسکوپیک زانو (Knee Deformities)</h4>
+    <ul class="list-styled teal">
+      <li><span class="li-content"><strong>ژنوواروم (Genu Varum - پای پرانتزی):</strong> زانوها از یکدیگر فاصله گرفته و قوس رو به بیرون برمی‌دارند؛ شایع‌ترین دفرمیتی ناشی از فرسایش غضروف کمپارتمان مدیال زانو.</span></li>
+      <li><span class="li-content"><strong>ژنووالگوم (Genu Valgum - پای ضربدری):</strong> زانوها به هم نزدیک شده و ساق‌ها از هم دور می‌شوند؛ ناشی از درگیری کمپارتمان لترال فمورال-تیبیال.</span></li>
+      <li><span class="li-content"><strong>ژنورکورواتوم (Genu Recurvatum):</strong> زانو بیش از ۱۸۰ درجه باز شده و هایپراکستند به سمت عقب انحراف می‌یابد (به علت شلی شدید کپسولولیگامانی).</span></li>
+    </ul>
+
+    <h4 style="margin-top:20px;">مانورهای اختصاصی معاینه زانو</h4>
+    <div class="grid2">
+      <div class="mini-card mc-green">
+        <h5>۱. سنجش زاویه فلکشن زانو (Knee Flexion Test)</h5>
+        <p>
+          بیمار طاق‌باز دراز کشیده و زانو خم می‌شود؛ در حالت نرمال باید <strong>پشت پاشنه پا به باسن برخورد کند</strong>. در صورت وجود محدودیت، فاصله پاشنه تا باسن با تعداد انگشت یا با خط‌کش (سانتی‌متر) ثبت می‌شود.<br/>
+          <span class="hbadge">نکته تکنیکی</span> در افراد با باسن‌های بسیار چاق و بزرگ، حتی در صورت عدم فلکشن کامل پاشنه به باسن می‌خورد که باید مدنظر معاینه‌گر باشد.
+        </p>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>۲. تست بالوتمنت کشکک (Patellar Ballottement / Balotman Test)</h5>
+        <p>
+          برای سنجش وجود <strong>افیوژن (مایع اضافی)</strong> به کار می‌رود. پزشک با یک دست مایع کیسه سوپراپاتلار را از بالا به سمت زیر کشکک هدایت و فشرده کرده و با انگشت اشاره دست دیگر به روی کشکک ضربه می‌زند.<br/>
+          <em>پاسخ مثبت:</em> پاتلا روی لایه مایع شناور است و بعد از ضربه به استخوان ران برخورد کرده و دوباره بالا می‌آید (دقیقاً مثل فشار دادن یک قطعه یخ در پارچ آب).
+        </p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:24px;">معاینه فیزیکی مفصل ران و لگن (Hip Examination)</h4>
+    <div class="kv-row">
+      <span class="kv-key">۱. تست فلکشن هیپ (Hip Flexion):</span>
+      <span class="kv-value">بیمار طاق‌باز می‌خوابد؛ زانو و ران خم شده و باید بتوانیم در حالت نرمال سطح قدامی ران را به شکم بیمار بچسبانیم.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">۲. تست اکستنشن هیپ (Hip Extension):</span>
+      <span class="kv-value">بیمار روی شکم (دمر) دراز می‌کشد؛ معاینه‌گر پا را از مفصل ران به سمت بالا اکستند می‌کند تا زاویه حرکت به سمت عقب ارزیابی شود.</span>
+    </div>
+    <div class="kv-row">
+      <span class="kv-key">۳. تست پاتریک یا فابر (Patrick's Test / FABER):</span>
+      <span class="kv-value">
+        کلمه FABER مخفف <strong>F</strong>lexion, <strong>AB</strong>duction, <strong>E</strong>xternal <strong>R</strong>otation است. قوزک پای مورد معاینه روی زانوی مقابل قرار داده می‌شود (فرم عدد ۴ انگلیسی) و با دست به زانوی خم‌شده به سمت تخت فشار ملایم وارد می‌شود:
+        <br/>• <strong>درد در ابتدای مانور:</strong> نشان‌دهنده پاتولوژی، آرتریت و آسیب در <em>مفصل هیپ (Hip pathology)</em> است.
+        <br/>• <strong>درد در انتهای دامنه مانور:</strong> بیانگر اختلال و التهاب در <em>مفصل ساکروایلیاک (Sacroiliac Joint dysfunction)</em> است.
+      </span>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 9 ===================== -->
+  <div class="section-header sh-cyan" id="sec-synovial">
+    <div class="icon">🧪</div>
+    <div>۹. آنالیز بیوشیمیایی و سلولی مایع ساینویال (Synovial Fluid Analysis)</div>
+  </div>
+
+  <div class="subsection sub-cyan">
+    <h4>اصول آرتروسنتز (Arthrocentesis) در مواجهه با افیوژن</h4>
+    <p>
+      اولین و حیاتی‌ترین اقدام در مواجهه با یک زانوی متورم دارای افیوژن، <strong>آسپیراسیون مایع مفصلی (آرتروسنتز)</strong> است؛ زیرا ماهیت مکانیکی، التهابی یا سپتیک مایع تنها با آنالیز آزمایشگاهی مشخص می‌گردد.
+    </p>
+
+    <div class="infobox ib-teal">
+      <span class="ib-icon">⛔</span>
+      <div>
+        <strong>تنها ۳ شرطی که می‌توانیم آرتروسنتز انجام ندهیم:</strong><br/>
+        ۱) مفصل بیمار قبلاً آرتروسنتز و آنالیز شده باشد.<br/>
+        ۲) تشخیص قبلی بیمار بر اساس آنالیز، از نوع مکانیکال قطعی بوده باشد.<br/>
+        ۳) بیمار هیچ علامت جدیدی (مانند تب، قرمزی ناگهانی، گرمی یا درد فزاینده) به جز افیوژن مزمن نداشته باشد.
+      </div>
+    </div>
+
+    <h4 style="margin-top:16px;">پارامترهای اساسی بررسی مایع مفصلی</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>دسته‌بندی مایع</th>
+            <th>شمارش تام گلبول سفید (WBC / mm³)</th>
+            <th>درصد نوتروفیل‌ها (%PMN)</th>
+            <th>شایع‌ترین تشخیص‌های محتمل</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>طبیعی (Normal)</strong></td>
+            <td>کمتر از ۲۰۰</td>
+            <td>کمتر از ۲۵٪</td>
+            <td>مفصل سالم</td>
+          </tr>
+          <tr>
+            <td><strong>مکانیکال / غیرالتهابی (Class I)</strong></td>
+            <td><strong>۲۰۰ تا ۲,۰۰۰</strong></td>
+            <td>کمتر از ۶۵٪ (معمولاً &lt; ۲۵-۴۰٪)</td>
+            <td><strong>استئوآرتریت (OA)</strong>، استئونکروز، تروما</td>
+          </tr>
+          <tr>
+            <td><strong>التهابی (Class II)</strong></td>
+            <td><strong>۲,۰۰۰ تا ۵۰,۰۰۰</strong></td>
+            <td>بالای ۶۵٪ تا ۸۵٪</td>
+            <td>آرتریت روماتوئید (RA)، آرتریت‌های کریستالی (نقرس، CPPD)</td>
+          </tr>
+          <tr>
+            <td><strong>عفونی / سپتیک (Class III)</strong></td>
+            <td><strong>بیش از ۵۰,۰۰۰</strong></td>
+            <td>بیش از ۸۵٪ تا ۹۵٪</td>
+            <td>آرتریت سپتیک باکتریایی حاد (اورژانس پزشکی)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="added-note">
+      <strong>بررسی یک سناریوی امتحانی بالینی مطرح‌شده توسط استاد:</strong><br/>
+      <em>«خانمی پس از خانه‌تکانی عید با افیوژن حاد زانو به درمانگاه مراجعه کرده است. در آرتروسنتز، شمارش گلبول سفید مایع ۳۵۰ سلول در میلی‌متر مکعب گزارش شده و درصد سلول‌های چند‌هسته‌ای (PMN) حدود ۴۰٪ (زیر ۶۵٪) است. محتمل‌ترین تشخیص چیست؟»</em><br/>
+      <strong>پاسخ تشخیصی:</strong> استئوآرتریت مکانیکال (Mechanical OA). لود سنگین خانه‌تکانی موجب پارگی میکروسکوپی غضروف و افیوژن مکانیکال زیر ۲۰۰۰ سلول شده است.
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>تست‌های دارای ارزش در برابر تست‌های فاقد ارزش در مایع سینوویال:</strong><br/>
+        • <strong>تست‌های ضروری:</strong> اسمیر مستقیم، رنگ‌آمیزی گرم، کشت میکروبی، شمارش سلولی و تمایز PMN، و بررسی کریستال‌ها با میکروسکوپ پلاریزان.<br/>
+        • <strong class="em">تست‌های کاملاً فاقد ارزش در سینوویال:</strong> اندازه‌گیری قند، پروتئین و تست رایت در مایع مفصلی بی‌ارزش است. بررسی قند در مایع مغزی‌نخاعی (CSF) و پروتئین در مایع پلور (قانون لایت) ارزش دارد نه در سینوویوم.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 10 ===================== -->
+  <div class="section-header sh-blue" id="sec-imaging">
+    <div class="icon">📷</div>
+    <div>۱۰. رویکرد تشخیصی رادیولوژی و ویژگی‌های گرافی در مفاصل مختلف</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>چهار مشخصه کلاسیک رادیوگرافیک در استئوآرتریت</h4>
+    <p>
+      به طور کلی تشخیص استئوآرتریت بالینی است؛ در گایدلاین‌های آمریکا تلفیق بالین و تصویربرداری توصیه شده است. چهار علامت اصلی در گرافی ساده (X-Ray) عبارتند از:
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>۱. کاهش غیرقرینه فضای مفصل (JSN)</h5>
+        <p>به علت تحلیل رفتن غضروف؛ باریک شدن فضا بر خلاف آرتریت‌های التهابی، موضعی و غیریکنواخت است.</p>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>۲. اسکلروز استخوان ساب‌کندرال</h5>
+        <p>افزایش تراکم و سفیدی شدید استخوان زیر غضروف (Bone Sclerosis) در پاسخ به بارگذاری مکانیکی فاقد بالشتک غضروفی.</p>
+      </div>
+
+      <div class="mini-card mc-orange">
+        <h5>۳. استئوفیت‌های حاشیه‌ای (Osteophytes)</h5>
+        <p>زوائد استخوانی در کناره‌های لبه مفصلی جهت افزایش سطح مقطع توزیع بار.</p>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>۴. کیست‌های ژئود ساب‌کندرال (Subchondral Cysts)</h5>
+        <p>نواحی رادیولوسنت گرد با حاشیه اسکلروتیک ناشی از نفوذ مایع با فشار بالا به درون ترابکول‌های استخوانی.</p>
+      </div>
+    </div>
+
+    <div class="infobox ib-blue">
+      <span class="ib-icon">🩻</span>
+      <div>
+        <strong>جایگاه MRI و افتراق‌های مهم تصویری:</strong><br/>
+        • <strong>ام‌آر‌آی (MRI) به هیچ عنوان اندیکاسیون روتین در استئوآرتریت ندارد؛</strong> زیرا پارگی مینیسک در اکثر افراد مسن مبتلا به OA به‌طور تصادفی و بدون ارزش جراحی یافت می‌شود.<br/>
+        • <strong>افتراق مهم با CPPD (بیماری رسوب کلسیم پیروفسفات):</strong> در گرافی به شکل کلسیفیکاسیون خطی غضروف مفصلی یا منیسک‌ها (Chondrocalcinosis) خود را نشان می‌دهد.
+      </div>
+    </div>
+
+    <h4 style="margin-top:20px;">یافته‌های رادیوگرافیک به تفکیک مفاصل</h4>
+    <div class="kv-row">
+      <span class="kv-key">گرافی دست:</span>
+      <span class="kv-value">
+        مشاهده استئوفیت در مفاصل DIP و PIP؛ در فرم استئوآرتریت اروزیو نمای اختصاصی <strong>«بال پرنده دریایی» (Gull-wing sign)</strong> یا Seagull pattern دیده می‌شود. مفصل CMC1 تقریباً همیشه درگیر بوده و با اسکلروز سفید ساب‌کندرال و تنگی فضا تظاهر می‌کند.
+      </span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">گرافی لگن و هیپ (Hip):</span>
+      <span class="kv-value">
+        <strong class="em">نکته افتراقی کلیدی:</strong> در استئوآرتریت (OA) کاهش فضای مفصلی عمدتاً در بخش <strong>فوقانی (Superior)</strong> سر فمور (ناحیه تحمل وزن) رخ می‌دهد؛ در حالی که در آرتریت روماتوئید (RA)، کاهش فضا به صورت سراسری و بیشتر در بخش <strong>داخلی/پایین‌تر (Inferior / Axially concentric)</strong> است.
+      </span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">کمپارتما‌ن‌های سه‌گانه زانو:</span>
+      <span class="kv-value">
+        شامل ۱) مفصل فموروتایبیال داخلی (Medial femorotibial joint) ۲) مفصل فموروتایبیال خارجی (Lateral femorotibial joint) ۳) مفصل پاتلوفمورال (Patellofemoral joint).<br/>
+        <strong class="em2">شایع‌ترین نوع درگیری در کمپارتمان مدیال فموروتایبیال رخ می‌دهد</strong> که منجر به پای پرانتزی می‌شود.
+      </span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">اندیکاسیون‌های انجام عکس رادیولوژی زانو:</span>
+      <span class="kv-value">
+        ۱) علائم بیمار آتیپیک باشد (مثلاً درد حاد التهابی، تب یا قرمزی).<br/>
+        ۲) علائم به درمان‌های محافظه‌کارانه و ورزش بعد از چند هفته هیچ پاسخی نداده و درد پایدار بماند.
+      </span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">گرافی ستون فقرات (Spine):</span>
+      <span class="kv-value">
+        در استئوآرتریت استئوفیت‌ها با جهت‌گیری <strong>افقی (Horizontal)</strong> رشد می‌کنند؛ در حالی که در بیماری‌های اسپوندیلوآرتروپاتی (نظیر AS)، پل‌های استخوانی دارای جهت‌گیری <strong>عمودی (Vertical)</strong> بوده و <strong>سندسموفیت (Syndesmophyte)</strong> نامیده می‌شوند.
+      </span>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 11 ===================== -->
+  <div class="section-header sh-green" id="sec-treatment">
+    <div class="icon">💊</div>
+    <div>۱۱. مدیریت جامع درمانی: استراتژی‌های غیردارویی، دارویی، تزریقات و جراحی</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>۱. درمان‌های غیردارویی (Non-Pharmacotherapy) — ستون اصلی درمان</h4>
+    <p>
+      اصل و سنگ‌بنای مدیریت بیماری استئوآرتریت بر پایه‌های غیردارویی استوار است:
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-green">
+        <h5>اجتناب از اضافه بار (Avoiding Overload)</h5>
+        <ul class="list-styled green">
+          <li>
+            <span class="li-content">
+              <strong>کاهش وزن:</strong> هر ۱ کیلوگرم کاهش وزن، معادل <strong>۳ تا ۶ برابر</strong> (۳ تا ۶ کیلوگرم) فشار وارده بر زانو را به‌ویژه هنگام بالا رفتن از پله کاهش می‌دهد. همچنین افت لپتین موجب بهبود مفاصل دست نیز می‌گردد.
+            </span>
+          </li>
+          <li>
+            <span class="li-content">
+              <strong>استفاده از عصا:</strong> <strong class="em">عصا باید حتماً در دستِ سمتِ مقابلِ پایِ مبتلا به OA گرفته شود</strong> تا بیشترین بازوی گشتاور را برای خنثی‌سازی وزن بدن فراهم کند.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>ورزش و تقویت عضلات (Muscle Exercise)</h5>
+        <ul class="list-styled">
+          <li>
+            <span class="li-content">
+              <strong>تقویت عضله چهارسر ران (Quadriceps):</strong> تقویت این عضله با تمرینات ایزومتریک سبب ایجاد زانوبند بیولوژیک طبیعی می‌شود.
+            </span>
+          </li>
+          <li>
+            <span class="li-content">
+              عضله قوی نیروهای کوبنده زمین را در خود جذب کرده و از تحمیل استرس مستقیم به غضروف پیشگیری می‌نماید.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-card mc-teal" style="margin-top:14px;">
+      <h5>اصلاح انحراف راستای اندام (Correction of Malalignment)</h5>
+      <p>
+        در موارد ژنوواروم یا والگوم، اصلاح امتداد اندام برای جلوگیری از توزیع نابرابر بار حیاتی است. در موارد خفیف از کفی‌ها و بریس‌های طبی تخلیه‌کننده بار (مثلاً کفی با وج خارجی برای درگیری مدیال) استفاده می‌شود. اما در دفورمیتی‌های شدید، اصلاح الاینمنت اغلب نیازمند مداخلات جراحی استئوتومی است.
+      </p>
+    </div>
+
+    <h4 style="margin-top:24px;">۲. دارودرمانی (Pharmacotherapy)</h4>
+    <div class="kv-row">
+      <span class="kv-key">استامینوفن (Acetaminophen):</span>
+      <span class="kv-value">سابقاً به عنوان داروی خط اول تجویز می‌شد، اما امروزه در گایدلاین‌های بالینی بین‌المللی اثربخشی آن هم‌ردیف دارونما تلقی شده و <strong>فاقد اثر درمانی قوی</strong> برای درد OA است.</span>
+    </div>
+
+    <div class="kv-row">
+      <span class="kv-key">داروهای ضدالتهاب غیراستروئیدی (NSAIDs):</span>
+      <span class="kv-value">
+        <strong>خط اول دارودرمانی:</strong> برای به حداقل رساندن عوارض گوارشی، کلیوی و قلبی-عروقی، ارجحیت قطعی با <strong>اشکال موضعی و تاپیکال (ژل، کرم و پچ)</strong> به‌ویژه در زانو و مفاصل دست است.<br/>
+        در میان فرم‌های خوراکی و سیستمیک (دیکلوفناک، سلکوکسیب، پیروکسیکام، ناپروکسن)، <strong>دیکلوفناک (Diclofenac)</strong> به علت حجم بالای مطالعات و مستندات بالینی، مؤثرترین و مستندترین پاسخ را در کاهش درد نشان داده است.
+      </span>
+    </div>
+
+    <h4 style="margin-top:24px;">۳. تزریقات داخل مفصلی (Intra-articular Injections) — حقایق و تبلیغات</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>روش تزریق داخل مفصلی</th>
+            <th>وضعیت تاییدیه و شواهد علمی</th>
+            <th>دیدگاه نقادانه استاد و اصول مصرف</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>کورتیکواستروئیدها (استروئید دپو)</strong></td>
+            <td><span class="tag tag-green">دارای تاییدیه رسمی ACR</span></td>
+            <td>تنها تزریقی که اثربخشی بالینی ضدالتهابی آن اثبات شده است. مصرف آن محدود به <strong>حداکثر ۳ تا ۴ بار در سال</strong> جهت مهار فاز حاد شعله‌وری درد و افیوژن است.</td>
+          </tr>
+          <tr>
+            <td><strong>اسید هیالورونیک (Hyaluronic Acid)</strong></td>
+            <td><span class="tag tag-yellow">شواهد اندک و متناقض</span></td>
+            <td>مولکول طبیعی ماتریکس غضروف است؛ شواهد قوی له آن کم و شواهد علیه آن نیز فراوان است. اثربخشی آن به مراتب کمتر از استروئیدهاست ولی ممکن است در درجات خفیف تا متوسط در برخی بیماران تسکین نسبی دهد.</td>
+          </tr>
+          <tr>
+            <td><strong>پی‌آرپی (PRP - پلاسمای غنی از پلاکت)</strong></td>
+            <td><span class="tag tag-red">فاقد شواهد درمانی استاندارد</span></td>
+            <td>از سانتریفیوژ خون خود فرد به دست می‌آید؛ در حال حاضر شواهد متقن علمی دال بر غضروف‌سازی یا درمان بیماری ندارد و جنبه تجاری آن پررنگ است.</td>
+          </tr>
+          <tr>
+            <td><strong>سلول‌های بنیادی (Stem Cells)</strong></td>
+            <td><span class="tag tag-red">فاقد اثربخشی اثبات‌شده</span></td>
+            <td>بسیار گران‌قیمت، تجاری و فاقد هرگونه تاییدیه راهنماهای معتبر روماتولوژی برای بازسازی غضروف.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">🌿</span>
+      <div>
+        <strong>طب مکمل و جایگزین (CAM - Complementary & Alternative Medicine):</strong><br/>
+        روش‌هایی مانند زالودرمانی، حجامت، دعا، طب سوزنی و درمان‌های گیاهی غیرمعیار، <strong>فاقد هرگونه شواهد علمی مستند</strong> هستند. گرچه برخی بیماران به دلیل اثر پلاسبو ادعای تسکین موقت دارند، پزشکان به هیچ عنوان آنها را توصیه نمی‌کنند.
+      </div>
+    </div>
+
+    <h4 style="margin-top:24px;">۴. جراحی تعویض مفصل (Joint Replacement Surgery / Arthroplasty)</h4>
+    <p>
+      به تعبیر صریح استاد سلطانی: <em>«جراحی تعویض مفصل یک درمان بیولوژیک بازسازی‌کننده نیست، بلکه پاک کردن صورت‌مسئله بیماری است.»</em> با این وجود، در صورت شکست تمام رویکردها، آخرین نجات‌بخش کیفیت زندگی است.
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-green">
+        <h5>اندیکاسیون‌های قطعی جراحی (۳ شرط الزامی)</h5>
+        <ul class="list-styled green">
+          <li><span class="li-content"><strong>۱. درد بسیار شدید و مقاوم به درمان‌های دارویی</strong> به نحوی که خواب و کیفیت زندگی بیمار را کاملاً مختل کند.</span></li>
+          <li><span class="li-content"><strong>۲. ناتوانی و محدودیت حرکتی شدید</strong> که بیمار را از کارهای پایه روزمره زندگی (ADL) بازدارد.</span></li>
+          <li><span class="li-content"><strong>۳. سایش استخوانی کامل (Bone-on-Bone)</strong> با از بین رفتن کامل فضای مفصلی در رادیوگرافی.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>موارد منع انجام جراحی (Contraindications)</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>سن زیر ۵۵ سال:</strong> به دلیل عمر محدود پروتز (حدود ۱۵ تا ۲۰ سال) و پیچیدگی فوق‌العاده جراحی‌های مجدد بازنگری (Revision).</span></li>
+          <li><span class="li-content"><strong>سن بالای ۸۵ سال:</strong> به دلیل ریسک بسیار بالای بیهوشی، آمبولی و بیماری‌های زمینه‌ای پرخطر.</span></li>
+          <li><span class="li-content"><strong>آتروفی و تضعیف بسیار شدید عضلات:</strong> در غیاب عضله فعال، پروتز مفصلی ثبات لازم را نداشته و بیمار پس از عمل نیز قادر به راه رفتن نخواهد بود.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="added-note" style="margin-top:16px;">
+      <strong>آینده‌نگری درمان و رویکرد چندتخصصی (Team Approach):</strong><br/>
+      در حال حاضر هیچ داروی قطعی برای معکوس کردن سیر استئوآرتریت وجود ندارد. افق‌های پژوهشی بر مهارکننده‌های فاکتور رشد کاتابولیک (Growth Factor / Protease Inhibitors) تمرکز دارند تا مانع پیشرفت تخریب ماتریکس شوند.<br/>
+      بر اساس اسلاید <em>«Who is the real expert for critical decisions?»</em> در تصمیم‌گیری‌های حساس، هیچ تخصصی به تنهایی حاکم نیست، بلکه ترکیبی هماهنگ از <strong>تیم پزشکی شامل روماتولوژیست، جراح ارتوپد، متخصص طب فیزیکی، فیزیوتراپیست و کاردرمانگر (Team approach)</strong> بالاترین موفقیت را برای بیمار رقم می‌زند.
+    </div>
+  </div>
+
+</div> <!-- END MAIN -->
+
+<!-- ===================== FOOTER ===================== -->
+<div class="footer">
+  <p><strong>جزوه آموزشی کورس روماتولوژی — دانشگاه علوم پزشکی آزاد یزد</strong></p>
+  <p>مبحث: استئوآرتریت (OA) • گردآوری و انطباق کامل علمی بر اساس تدریس و اسلایدهای دکتر سلطانی</p>
+  <p style="font-size:12px; opacity:0.75; margin-top:8px;">طراحی‌شده با معماری بهینه‌سازی‌شده برای مطالعه آفلاین در موبایل و دسکتاپ</p>
+</div>
+
+<!-- ===== نوار شناور ابزار چند پلتفرمی ===== -->
+<div id="highlight-panel">
+  <span>🖍️ ابزار مطالعه:</span>
+  <button class="hl-btn hl-btn-yellow" onclick="applyColorHighlight('#fff59d')" title="زرد"></button>
+  <button class="hl-btn hl-btn-green" onclick="applyColorHighlight('#c8e6c9')" title="سبز"></button>
+  <button class="hl-btn hl-btn-blue" onclick="applyColorHighlight('#bbdefb')" title="آبی"></button>
+  <button class="hl-btn hl-btn-pink" onclick="applyColorHighlight('#f8bbd0')" title="صورتی"></button>
+  <button class="panel-action-btn" onclick="addNoteAtSelection()">📝 یادداشت</button>
+  <button class="panel-action-btn" onclick="viewAllNotes()">🔍 لیست یادداشت‌ها</button>
+  <button class="panel-action-btn panel-action-btn-red" onclick="clearSelectedHighlight()">❌ پاک‌کردن</button>
+  <button class="panel-action-btn" style="background:#2e7d32;" onclick="exportModifiedHTML()">📥 خروجی گرفتن از فایل</button>
+</div>
+
+<!-- پنجره مودال ثبت/ویرایش یادداشت -->
+<div class="modal-overlay" id="note-edit-modal">
+  <div class="modal-card">
+    <h4 id="modal-title">ثبت یادداشت جدید در این محل</h4>
+    <textarea class="modal-textarea" id="modal-note-input" placeholder="نکته مهم کلاسی خود را جهت مرور سریع بنویسید..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNoteChanges()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-danger" id="btn-delete-note" onclick="deleteActiveNote()">❌ حذف یادداشت</button>
+      <button class="btn btn-secondary" onclick="closeNoteModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- پنجره مودال لیست همه‌ی یادداشت‌ها -->
+<div class="modal-overlay" id="all-notes-modal">
+  <div class="modal-card" style="max-height: 80%; overflow-y: auto; max-width: 600px;">
+    <h4>📋 تمام یادداشت‌های ثبت‌شده شما</h4>
+    <div id="all-notes-list" style="margin-bottom: 20px;">
+      <!-- لیست پویا به صورت خودکار پر خواهد شد -->
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAllNotesModal()">بستن پنجره</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== منطق کدهای جاوا اسکریپت (iOS-Safe و پایدار) ===== -->
+<script>
+  const storageStateKey = "rheumatology_session9_osteoarthritis_interactive_state";
+  let savedRange = null; 
+  let activeMarker = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPageState();
+  });
+
+  function savePageState() {
+    const mainHTML = document.querySelector('.main').innerHTML;
+    localStorage.setItem(storageStateKey, mainHTML);
+  }
+
+  function loadPageState() {
+    const savedHTML = localStorage.getItem(storageStateKey);
+    if (savedHTML) {
+      document.querySelector('.main').innerHTML = savedHTML;
+    }
+  }
+
+  function applyColorHighlight(colorHex) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا متنی از جزوه را با ماوس یا لمس طولانی انتخاب کنید.");
+      return;
+    }
+
+    const main = document.querySelector('.main');
+    const originalEditable = main.contentEditable;
+    
+    main.contentEditable = "true";
+    
+    try {
+      document.execCommand("styleWithCSS", false, true);
+      document.execCommand("backColor", false, colorHex);
+    } catch (e) {
+      console.error("خطای هایلایت:", e);
+    }
+    
+    main.contentEditable = originalEditable;
+    selection.removeAllRanges();
+    savePageState();
+  }
+
+  function clearSelectedHighlight() {
+    applyColorHighlight('transparent');
+  }
+
+  function addNoteAtSelection() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا بخشی از متن را با کشیدن انگشت یا ماوس انتخاب کنید تا یادداشت به آنجا متصل شود.");
+      return;
+    }
+
+    savedRange = selection.getRangeAt(0).cloneRange();
+    
+    activeMarker = null; 
+    document.getElementById("modal-title").innerText = "ثبت یادداشت جدید در این محل";
+    document.getElementById("modal-note-input").value = "";
+    document.getElementById("btn-delete-note").style.display = "none";
+    document.getElementById("note-edit-modal").style.display = "flex";
+  }
+
+  function saveNoteChanges() {
+    const text = document.getElementById("modal-note-input").value.trim();
+    if (!text) {
+      alert("لطفاً متن یادداشت را وارد کنید.");
+      return;
+    }
+
+    if (activeMarker === null) {
+      if (savedRange) {
+        const marker = document.createElement("span");
+        marker.className = "note-marker";
+        marker.setAttribute("data-note", text);
+        marker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+        marker.contentEditable = "false";
+        
+        try {
+          savedRange.collapse(false);
+          savedRange.insertNode(marker);
+        } catch (e) {
+          console.error("Error inserting marker:", e);
+          alert("امکان درج یادداشت در این بخش به دلیل تداخل تگ‌ها وجود ندارد. لطفا متن ساده‌تری را انتخاب کنید.");
+        }
+        savedRange = null;
+      } else {
+        alert("محدوده متن انتخاب شده معتبر نیست. لطفاً مجدداً متن را انتخاب کنید.");
+        return;
+      }
+    } else {
+      activeMarker.setAttribute("data-note", text);
+      activeMarker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+    }
+
+    closeNoteModal();
+    savePageState();
+  }
+
+  function deleteActiveNote() {
+    if (activeMarker && confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      activeMarker.remove();
+      closeNoteModal();
+      savePageState();
+    }
+  }
+
+  function closeNoteModal() {
+    document.getElementById("note-edit-modal").style.display = "none";
+    activeMarker = null;
+    savedRange = null;
+  }
+
+  document.addEventListener("click", (e) => {
+    const targetMarker = e.target.closest(".note-marker");
+    if (targetMarker) {
+      activeMarker = targetMarker;
+      const savedText = activeMarker.getAttribute("data-note") || "";
+      document.getElementById("modal-title").innerText = "مشاهده و ویرایش یادداشت";
+      document.getElementById("modal-note-input").value = savedText;
+      document.getElementById("btn-delete-note").style.display = "inline-block";
+      document.getElementById("note-edit-modal").style.display = "flex";
+    }
+  });
+
+  function viewAllNotes() {
+    const markers = document.querySelectorAll(".note-marker");
+    const listContainer = document.getElementById("all-notes-list");
+    listContainer.innerHTML = "";
+
+    if (markers.length === 0) {
+      listContainer.innerHTML = '<p style="text-align:center; color:var(--muted); font-size:14px; padding:20px 0;">هیچ یادداشتی در کل متن ثبت نشده است.</p>';
+      document.getElementById("all-notes-modal").style.display = "flex";
+      return;
+    }
+
+    markers.forEach((marker, index) => {
+      const noteText = marker.getAttribute("data-note") || "";
+      const context = marker.previousSibling ? marker.previousSibling.textContent.slice(-35) : "...";
+      
+      const card = document.createElement("div");
+      card.className = "mini-card mc-blue";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `
+        <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">یادداشت شماره ${index + 1} (متن مجاور: "...${escapeHTML(context)}")</div>
+        <div style="font-weight:bold; font-size:14px; line-height:1.6; white-space:pre-wrap; color:var(--text);">${escapeHTML(noteText)}</div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button onclick="scrollToMarker(${index})" class="tag tag-blue" style="border:none; cursor:pointer; padding:4px 10px;">🔍 پرش به محل یادداشت</button>
+          <button onclick="deleteMarkerFromList(${index})" class="tag tag-red" style="border:none; cursor:pointer; padding:4px 10px;">❌ حذف</button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    document.getElementById("all-notes-modal").style.display = "flex";
+  }
+
+  window.scrollToMarker = function(index) {
+    const markers = document.querySelectorAll(".note-marker");
+    if (markers[index]) {
+      closeAllNotesModal();
+      markers[index].scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      const originalBg = markers[index].style.backgroundColor;
+      markers[index].style.backgroundColor = "#ff5252";
+      markers[index].style.transform = "scale(1.4)";
+      
+      setTimeout(() => {
+        markers[index].style.backgroundColor = originalBg;
+        markers[index].style.transform = "scale(1)";
+      }, 1500);
+    }
+  };
+
+  window.deleteMarkerFromList = function(index) {
+    if (confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      const markers = document.querySelectorAll(".note-marker");
+      if (markers[index]) {
+        markers[index].remove();
+        savePageState();
+        viewAllNotes(); 
+      }
+    }
+  };
+
+  function exportModifiedHTML() {
+    const docClone = document.cloneNode(true);
+    const currentMainHTML = document.querySelector('.main').innerHTML;
+    docClone.querySelector('.main').innerHTML = currentMainHTML;
+    
+    const htmlString = '<!DOCTYPE html>\n' + docClone.documentElement.outerHTML;
+    
+    const blob = new Blob([htmlString], { type: "text/html;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "rheumatology_session9_osteoarthritis_interactive_output.html";
+    link.click();
+  }
+
+  function closeAllNotesModal() {
+    document.getElementById("all-notes-modal").style.display = "none";
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+</script>
+
+</body>
+</html>
